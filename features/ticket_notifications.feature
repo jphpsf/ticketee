@@ -30,7 +30,7 @@ Feature: Ticket notifications
     Then "alice@ticketee.com" should receive an email
     When "alice@ticketee.com" opens the email
     Then they should see "updated the Release date ticket" in the email body
-    Then they click the first link in the email
+    Then they follow "view this ticket online here" in the email
     Then I should be on the "Release date" ticket in the "TextMate 2" project
   
   Scenario: Comment authors are automatically subscribed to a ticket
